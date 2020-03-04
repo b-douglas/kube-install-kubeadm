@@ -30,6 +30,6 @@ sudo mkdir -p /etc/systemd/system/docker.service.d
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 
-sudo apt-mark hold containerd docker-ce docker-ce-cli
+sudo apt-mark hold containerd.io docker-ce docker-ce-cli
 
 sudo usermod -aG docker $USER
