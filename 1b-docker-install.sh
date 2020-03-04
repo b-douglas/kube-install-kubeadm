@@ -2,6 +2,7 @@
 
 set -e
 set -x
+set -u
 
 
 ## Install Docker CE.
@@ -30,3 +31,5 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 
 sudo apt-mark hold containerd docker-ce docker-ce-cli
+
+sudo usermod -aG docker $USER
