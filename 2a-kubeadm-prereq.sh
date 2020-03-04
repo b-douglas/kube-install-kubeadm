@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e 
+set -e
 set -x
 
 if [ -f "/etc/kubeadm.prereq.isrun" ]; then

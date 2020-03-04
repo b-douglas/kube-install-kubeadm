@@ -5,7 +5,8 @@ set -x
 
 
 ## Install Docker CE.
-sudo apt-get update && apt-get install -y \
+sudo apt-get update 
+sudo apt-get install --allow-downgrades -y \
   containerd.io=1.2.10-3 \
   docker-ce=5:19.03.4~3-0~ubuntu-$(lsb_release -cs) \
   docker-ce-cli=5:19.03.4~3-0~ubuntu-$(lsb_release -cs)
