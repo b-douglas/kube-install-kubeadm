@@ -2,7 +2,10 @@
 
 set -e
 set -x
+set -u
 
+HOST=$1
 
-
-kubeadm init --control-plane-endpoint=kubecp-01 --node-name=kubecp-01  --pod-network-cidr=192.168.0.0/16
+#NOTE we are setting  CIDR to 192.168.0.0/16 for Calico
+# Using the default means we don't need to update the CIDR in calico.yml
+sudo kubeadm init --control-plane-endpoint=${HOST} --node-name=${HOST}  --pod-network-cidr=192.168.0.0/16

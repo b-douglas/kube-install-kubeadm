@@ -2,12 +2,14 @@
 
 set -e
 set -x
+set -u
 
-echo "172.30.10.29  kubecp-01" >> /etc/hosts
+IP=$1
+HOST=$2
 
+sudo bash -c "echo \"$IP $HOST\" >> /etc/hosts"
 
-
-kubeadm config images pull
+sudo kubeadm config images pull
 
 
 
