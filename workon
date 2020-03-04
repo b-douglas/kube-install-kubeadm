@@ -1,0 +1,8 @@
+
+#!/bin/bash
+
+set -e
+set -x
+
+
+helm install --namespace kube-system metrics-server stable/metrics-server --set args={"--kubelet-insecure-tls=true, --kubelet-preferred-address-types=InternalIP\,Hostname\,ExternalIP"}

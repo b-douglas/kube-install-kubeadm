@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+set -x
+
+helm install --namespace kube-system kube-dashboard stable/kubernetes-dashboard
+
